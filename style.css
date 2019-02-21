@@ -7,3 +7,15 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+
+.coffee-name {
+    font-size: 1.7rem;
+}
+
+.coffee-roast {
+    font-size: 1.1rem;
+}
+
+/*.left-row {*/
+    /*height: 100%;*/
+/*}*/

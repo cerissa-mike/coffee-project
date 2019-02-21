@@ -2,28 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <h1>Coffee!</h1>
+<h1 class="text-center p-3">Coffee!</h1>
+<hr class="pb-3">
 
-    <div id="coffees"></div>
-    <br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div id="coffees"></div>
+        </div>
+    </div>
+</div>
 
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input type="text" id="coffee-select">
-        <input id="submit" type="submit" />
-    </form>
+        <!----- form 1 ------->
+        <div class="col-sm-6">
+            <form>
+                <label for="roast-selection" class="font-weight-bold pb-1">Roast</label><br>
+                <select class="custom-select" id="roast-selection">
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select><br><br>
+
+                <label for="coffee-select" class="font-weight-bold">Coffee Name</label><br>
+                <input id="coffee-select" type="text" name="coffee-select" class="input-group"><br>
+                <input id="submit1" type="submit" class="btn btn-primary btn-block"><br><br>
+
+            </form><hr>
+        </div>
+
+        <!--- /form1 --->
+
+        <!-----  form 2 ------>
+        <div class="col-sm-6 float-right">
+            <form>
+                <div class="text-center"><h3>Add a Coffee</h3></div>
+                <label for="roast-selection2" class="font-weight-bold pb-1">Roast</label><br>
+                <select class="custom-select" id="roast-selection2">
+                    <option>all</option>
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+
+                <br>
+
+                <label for="coffee-name-search-bottom" class="font-weight-bold">Coffee Name</label><br>
+                <input class="input-group" id="coffee-name-search-bottom" type="text" name="coffee-name-search"><br>
+                <input class="btn btn-primary btn-block" id="submit-bottom" type="submit">
+
+            </form><hr>
+        </div>
+        <!--- /form2 --->
+
+
 
 
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
