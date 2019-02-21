@@ -7,7 +7,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -28,7 +28,7 @@ function updateCoffees(e) {
 function iterateThroughCoffees(e) {
     var html = '';
     for (var i = 0; i < coffees.length; i++)
-        if (coffeeSelect.innerText === coffees[i].name) {
+        if (coffees[i].name.includes(coffeeSelect.value)) {
             html += renderCoffee(coffees[i]);
         }
     coffeeList.innerHTML = html;
@@ -53,11 +53,12 @@ var coffees = [
 ];
 
 var coffeeList = document.querySelector('#coffees');
-var coffeeSelect = document.querySelector('#coffeeSelect');
+var coffeeSelect = document.getElementById('coffee-select');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 coffeeList.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
-coffeeSelect.addEventListener('onkeypress', iterateThroughCoffees);
+submitButton.addEventListener('click', updateCoffees, false);
+coffeeSelect.addEventListener('keyup', iterateThroughCoffees, false);
+
